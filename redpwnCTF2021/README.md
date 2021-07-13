@@ -1,20 +1,22 @@
-#redpwnCTF 2021
-
-##crypto/baby
+# redpwnCTF 2021
+================
+## crypto/baby
+--------------
+@qw1zzard
 >EvilMuffinHa
 >
 >I want to do an RSA!
-@qw1zzard
 
 В файле output.txt даны (n,e) и c - открытый ключ и закодированное сообщение соответственно.
 Читаем об [RSA на Википедии](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) и ищем подходящую тулзу для дешифрации.
 У меня уже есть [готовый вариант](https://www.dcode.fr/rsa-cipher), остаётся вставить числа в нужные поля и получить флаг!
 
-##rev/wstrings
+## rev/wstrings
+---------------
+@qw1zzard
 >NotDeGhost
 >
 >Some strings are wider than normal...
-@qw1zzard
 
 Условие явно намекает на то, что речь идёт о строках в исполняемом файле.
 Открываем IDA Pro x64 (x32 будет ругаться), зажимаем Shift+F12 и.. ничего?
@@ -22,12 +24,13 @@
 Куда можно заглянуть? Безусловно, код, но не забываем и о HEX-виде.
 Открываем HEX View и, почти в самом начале файла, адресы  0000000000000910-00000000000009B0 посимвольно содержат флаг!
 
-##rev/bread-making
+## rev/bread-making
+-------------------
+@qw1zzard
 >KyleForkBomb
 >
 >My parents aren't home! Quick, help me make some bread please...
 >**nc mc.ax 31796**
-@qw1zzard
 
 Обращение к серверу через netcat, а также беглый анализ кода дают понять, что речь идёт о LitRPG-квесте по выпечке хлеба.
 Два варианта решения:
